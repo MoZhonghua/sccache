@@ -357,14 +357,6 @@ impl OverlayBuilder {
                     let mut cmd = Command::new(bubblewrap);
                     cmd.arg("--die-with-parent")
                         .args(&["--cap-drop", "ALL"])
-                        .args(&[
-                            "--unshare-user",
-                            "--unshare-cgroup",
-                            "--unshare-ipc",
-                            "--unshare-pid",
-                            "--unshare-net",
-                            "--unshare-uts",
-                        ])
                         .arg("--bind")
                         .arg(&target_dir)
                         .arg("/")
