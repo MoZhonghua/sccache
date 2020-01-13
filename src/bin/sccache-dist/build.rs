@@ -378,7 +378,7 @@ impl OverlayBuilder {
                     let compile_output = cmd
                         .output()
                         .chain_err(|| "Failed to retrieve output from compile")?;
-                    trace!("compile_output: {:?}", compile_output);
+                    info!("compile_output: {:?}", compile_output);
 
                     let mut outputs = vec![];
                     trace!("retrieving {:?}", output_paths);
